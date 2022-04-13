@@ -1,7 +1,7 @@
 import { uploadPhoto, createUser } from './utils';
 
 export default function handleProfileSignup() {
-  uploadPhoto().then((info) => {
+  return uploadPhoto().then((info) => {
     const message = info.body;
     createUser().then((info) => {
       console.log(message.concat(' ', info.firstName, ' ', info.lastName));
