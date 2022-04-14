@@ -2,7 +2,12 @@ import { uploadPhoto, createUser } from './utils';
 
 export default async function asyncUploadUser() {
   const newObj = {};
-  newObj.photo = await uploadPhoto();
-  newObj.user = await createUser();
+  try {
+    newObj.photo = await uploadPhoto();
+    newObj.user = await createUser();
+  } catch (error) {
+    newObj.photo = null;
+    newObj.user = null;
+  }
   return newObj;
 }
