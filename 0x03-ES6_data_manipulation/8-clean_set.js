@@ -1,8 +1,5 @@
 /**
- *
- * @param {*} set
- * @param {*} startString
- * @returns
+ *returns a string of all the set values that start with a specific string
  */
 export default function cleanSet(set, startString) {
   if (startString.length === 0) return '';
