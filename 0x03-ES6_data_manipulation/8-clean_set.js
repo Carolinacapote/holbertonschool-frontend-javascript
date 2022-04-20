@@ -2,7 +2,7 @@
  *returns a string of all the set values that start with a specific string
  */
 export default function cleanSet(set, startString) {
-  if (startString.length === 0) return '';
+  if (!startString || startString.length === 0) return '';
   let result = '';
   set.forEach((element) => {
     if (typeof element === 'string') {
